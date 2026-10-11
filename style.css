@@ -161,3 +161,35 @@
   @media (min-width: 768px) {
     .projects-grid { grid-template-columns: repeat(3, 1fr); }
   }
+
+/* ===== Contact form ===== */
+form { max-width: 500px; }
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-2);
+}
+
+.field label { margin-bottom: 4px; }
+
+input, textarea {
+  padding: var(--space-1);
+  font-size: var(--fs-base);
+  font-family: inherit;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.error {
+  color: var(--error);
+  font-size: var(--fs-sm);
+  min-height: 1.4em;
+}
+
+input.invalid, textarea.invalid { border-color: var(--error); }
+
+.form-status { margin-top: var(--space-2); }
+.form-status.success { color: var(--success); }
