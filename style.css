@@ -134,3 +134,30 @@
       text-align: left;
     }
   }
+
+/* ===== Projects: 1 column on mobile ===== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+  
+  .card {
+    background: var(--box);
+    padding: var(--space-2);
+    border-radius: 8px;
+  }
+  
+  .card h3 { margin-bottom: var(--space-1); }
+  .card p { margin-bottom: var(--space-1); }
+  
+  .card-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  /* Desktop: 3 columns */
+  @media (min-width: 768px) {
+    .projects-grid { grid-template-columns: repeat(3, 1fr); }
+  }
